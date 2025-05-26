@@ -6,7 +6,7 @@ import { cleanData } from '../../../home/actions/cleanData';
 
 export default function EndpointTester() {
   const [url, setUrl] = useState('');
-  const [data, setData] = useState<any[]>([]);
+  const [data, setData] = useState<unknown[]>([]);
 
 
 const handleSubmit = async () => {
