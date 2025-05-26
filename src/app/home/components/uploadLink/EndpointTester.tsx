@@ -2,18 +2,13 @@
 
 import { useState } from 'react';
 import styles from './enpointTeaster.module.scss';
-import { cleanData, urlPresigned } from '../../../home/actions/cleanData';
-import cleanDataServices from '../../../services/cleanDataServices';
+import { cleanData } from '../../../home/actions/cleanData';
 
 export default function EndpointTester() {
   const [url, setUrl] = useState('');
   const [data, setData] = useState<any[]>([]);
 
-  const saveFileS3 = async (presignedUrl: string, file: { buffer: Buffer, mimeType: string }) => {
-    const response = await cleanDataServices.saveFileS3(presignedUrl, file);
-    console.log('response :>> ', response);
-  };
-  
+
 const handleSubmit = async () => {
   if (!url) return alert('Por favor ingresa una URL.');
 

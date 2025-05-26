@@ -16,7 +16,7 @@ const cleanDataServices = {
       return { error: String(error) };
     }
   },
-  getUrlPresigned: async (body: any) => {
+  getUrlPresigned: async (body: unknown) => {
     const url = 'https://m3pfepldya.execute-api.us-east-1.amazonaws.com/getPresignedUrl'
     console.log('body :>> ', body);
     try {

@@ -35,8 +35,8 @@ export async function cleanData(url: string) {
     .map(([key]) => key);
 
   // Función para limpiar un objeto
-  const limpiarObjeto = (obj: Record<string, any>) => {
-    const limpio: Record<string, any> = {};
+  const limpiarObjeto = (obj: Record<string, unknown>) => {
+    const limpio: Record<string, unknown> = {};
 
     Object.entries(obj).forEach(([key, value]) => {
       if (camposExcluidos.includes(key)) return;
@@ -74,7 +74,7 @@ export async function cleanData(url: string) {
   };
 }
 
-export async function urlPresigned(body: any) {
+export async function urlPresigned(body: unknown) {
   const response = await cleanDataServices.getUrlPresigned(body);
   return response;
 }
